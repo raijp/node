@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "cmp": "npx babel js_src -d js_dst --presets @babel/preset-react",
+    "cmp-auto": "npx babel -w js_src -d js_dst --presets @babel/preset-react"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/preset-react": "^7.18.6"
+  }
+}
