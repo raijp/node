@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "cmp": "npx babel",
+    "cmp-dir": "npx babel ./src --out-dir ./dst"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-react": "^6.24.1"
+  }
+}
