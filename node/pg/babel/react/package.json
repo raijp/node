@@ -4,8 +4,8 @@
     "cmp-dir": "npx babel ./src --out-dir ./dst"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-react": "^6.24.1"
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.10",
+    "@babel/preset-react": "^7.18.6"
   }
 }
