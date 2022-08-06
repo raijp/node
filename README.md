@@ -12,6 +12,7 @@ JSX to JS
 #docker exec -it node1-v1.0 npm i -D --prefix ./babel/react babel-core
 #docker exec -it node1-v1.0 npm i -D --prefix ./babel/react babel-preset-react
 #docker exec -it node1-v1.0 /bin/bash -c 'echo {\"presets\":[\"react\"]} > ./babel/react/.babelrc'
+# add scripts to package.js
 
-npx --prefix ./babel/react/ babel ./babel/react/src --out-dir ./babel/react/dst
+docker exec -it node1-v1.0 npm --prefix ./babel/react/ run cmp-dir
 ```
