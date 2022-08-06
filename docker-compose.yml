@@ -1,0 +1,35 @@
+version: '3.6'
+services:
+  nginx:
+    image: 'nginx:1.23'
+    container_name: 'nginx-${version}'
+    networks:
+      main_netwoek:
+        ipv4_address: '${subnet_ip}.2'
+    ports:
+      - '${nginx_port}:80'
+    volumes:
+      - './nginx/etc/nginx/conf.d:/etc/nginx/conf.d/'
+      - './nginx/usr/share/nginx/html:/usr/share/nginx/html'
+      - './node/pg:/var/node/pg'
+  node:
+    build: 'node/.'
+    image: 'node-16-16-0-bullseye'
+    container_name: 'node1-${version}'
+    tty: true
+    stdin_open: true
+    networks:
+      main_netwoek:
+        ipv4_address: '${subnet_ip}.3'
+    ports:
+      - '${node1_port}:80'
+    volumes:
+      - './node/pg:/var/node/pg'
+
+networks:
+  main_netwoek:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: '${subnet_ip}.0/24'
