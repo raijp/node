@@ -16,4 +16,5 @@ JSX to JS
 # add scripts to package.js
 
 docker exec -it node1-v1.0 npm --prefix ./www/react/ run cmp
+# Navigate to http://127.0.0.1:9080/ on a browser.
 ```
